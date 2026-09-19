@@ -72,18 +72,14 @@
   }
 
   .mark {
-    width: 108px; height: 108px;
-    margin-top: -54px;
+    display: block;
+    width: 124px; height: 124px;
+    margin-top: -62px;
     position: relative;
     border-radius: 14px;
     border: 3px solid var(--ink);
-    background: linear-gradient(150deg, #3a2a2c, #1d1716);
-    display: grid; place-items: center;
-    font-family: var(--disp);
-    font-weight: 800;
-    font-size: 40px;
-    letter-spacing: -.03em;
-    color: var(--ember);
+    background: #1d1716;
+    object-fit: cover;
     box-shadow: 0 14px 40px rgba(0,0,0,.45);
   }
 
@@ -181,7 +177,7 @@
 <div class="sky"></div>
 
 <div class="wrap">
-  <div class="mark">SC</div>
+  <img class="mark" src="portrait.jpg" width="124" height="124" alt="Stanley Chiu, standing above Jiufen, Taiwan">
 
   <h1>I&rsquo;m Stanley.<span class="cursor" aria-hidden="true"></span></h1>
 
