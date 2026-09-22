@@ -1,0 +1,66 @@
+export type Project = {
+  slug: string;
+  title: string;
+  href?: string;
+  tags: string[];
+  summary: string;
+  detail?: string;
+  hardPart?: string;
+};
+
+export const projects: Project[] = [
+  {
+    slug: "orchestrator",
+    title: "An orchestrator that routes subtasks to different coding agents",
+    tags: ["Agents", "Systems"],
+    summary:
+      "Cheaper models handled mechanical edits, stronger ones handled design and review.",
+    detail:
+      "At Handled AI I built the system that split incoming engineering tickets into subtasks and routed each one to a coding agent based on what the work actually needed, rather than sending everything to the same model.",
+    hardPart:
+      "The failure mode was agents that wandered outside their lane. The loops that stayed reliable were the ones where I drew a hard boundary around what the agent was allowed to touch — file scope, tool access, and a clear handoff back to review. Loops I trusted to police themselves did not.",
+  },
+  {
+    slug: "triage-pipeline",
+    title: "A triage pipeline that scores, tags, and links product feedback",
+    tags: ["Systems", "Pipelines"],
+    summary:
+      "It replaced a gate that quietly created no issue at all for anything judged a duplicate.",
+    detail:
+      "Feedback came in faster than anyone could read it. The pipeline scored each piece, tagged it, and linked it to existing issues so nothing that mattered got silently dropped.",
+    hardPart:
+      "The previous version treated a duplicate verdict as a reason to do nothing, which meant real signal disappeared with no record it had ever arrived. I rebuilt it so a duplicate still links and counts, and only true noise gets filtered out.",
+  },
+  {
+    slug: "vandycv",
+    title: "VandyCV, an LLM-backed resume builder",
+    href: "https://github.com/stanleychiu0314/vandycv",
+    tags: ["Next.js", "Flask", "PostgreSQL"],
+    summary: "I owned the backend, the schema, and the prompting.",
+    detail:
+      "A team project where the model helps draft resume bullets from a user's raw experience. Next.js frontend, Flask API, PostgreSQL for storage.",
+    hardPart:
+      "I owned the backend, the schema, and the OpenAI integration on a team of three — including prompt design and cutting both latency and token cost with response caching.",
+  },
+  {
+    slug: "klondike-solitaire",
+    title: "Klondike Solitaire, a production full-stack game",
+    href: "https://github.com/stanleychiu0314/KlondikeSolitair",
+    tags: ["React", "Node", "MongoDB"],
+    summary: "Every move stored with before and after state, so undo and replay came for free.",
+    detail:
+      "A full-stack card game with an authoritative server, built solo end to end: React client, Node/Express API, MongoDB for state, deployed behind nginx on AWS.",
+    hardPart:
+      "Redesigning the data model mid-project so every move persisted as a document with before/after state bought unbounded undo and move-by-move replay for free. Separately, I found an OAuth flow that exposed client secrets in frontend code and moved token exchange server-side, and refactored batch autocomplete to sequential requests after batching broke server-side validation.",
+  },
+  {
+    slug: "vr-lab",
+    title: "VR environments for the Wallace Lab at the Vanderbilt Kennedy Center",
+    tags: ["Unity", "C#"],
+    summary: "Eye tracking and binaural audio, inside a frame budget.",
+    detail:
+      "Built VR environments for a neuroscience lab studying attention and behavior, in Unity and C#, integrating eye tracking and binaural audio while holding a strict frame budget.",
+  },
+];
+
+export const featuredProjects = projects.slice(0, 3);
