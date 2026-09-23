@@ -58,6 +58,18 @@ export const projects: Project[] = [
       "Redesigning the data model mid-project so every move persisted as a document with before/after state bought unbounded undo and move-by-move replay for free. Separately, I found an OAuth flow that exposed client secrets in frontend code and moved token exchange server-side, and refactored batch autocomplete to sequential requests after batching broke server-side validation.",
   },
   {
+    slug: "courseflix",
+    title: "CourseFlix, a course review and scheduling platform for Vanderbilt",
+    href: "https://github.com/stanleychiu0314/courseflix",
+    image: "/projects/courseflix-list.png",
+    tags: ["React", "Express", "PostgreSQL", "CI/CD"],
+    summary: "A 5-person team project — I set up the repo and built the CI/CD pipeline.",
+    detail:
+      "Course search, peer reviews, grade distributions, and schedule planning for Vanderbilt students, built with a team of five: React/Vite frontend, Express API, PostgreSQL backend, Microsoft Azure AD login.",
+    hardPart:
+      "I stood up the repo and built the GitHub Actions CI/CD pipeline the rest of the team shipped through, then stayed on as the one merging feature PRs — including a cross-listing fix so reviews on one course correctly show up on its cross-listed sibling.",
+  },
+  {
     slug: "vr-lab",
     title: "VR environments for the Wallace Lab at the Vanderbilt Kennedy Center",
     tags: ["Unity", "C#"],
