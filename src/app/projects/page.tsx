@@ -1,12 +1,20 @@
 import type { Metadata } from "next";
+import type { ReactNode } from "react";
 import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 import { Pane } from "@/components/pane";
+import { OrchestratorDiagram } from "@/components/diagrams/orchestrator-diagram";
+import { TriageDiagram } from "@/components/diagrams/triage-diagram";
 import { projects } from "@/lib/projects";
 
 export const metadata: Metadata = {
   title: "Projects",
   description: "Things Stanley Chiu has built — agent orchestration, pipelines, and full-stack projects.",
+};
+
+const diagrams: Record<string, ReactNode> = {
+  orchestrator: <OrchestratorDiagram />,
+  "triage-pipeline": <TriageDiagram />,
 };
 
 export default function ProjectsPage() {
@@ -57,6 +65,12 @@ export default function ProjectsPage() {
                   alt={`${project.title} screenshot`}
                   className="w-full rounded-xl border border-border"
                 />
+              )}
+
+              {diagrams[project.slug] && (
+                <div className="rounded-xl border border-border bg-card px-4 py-5">
+                  {diagrams[project.slug]}
+                </div>
               )}
 
               {project.hardPart && (
