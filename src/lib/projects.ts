@@ -2,6 +2,8 @@ export type Project = {
   slug: string;
   title: string;
   href?: string;
+  demoUrl?: string;
+  image?: string;
   tags: string[];
   summary: string;
   detail?: string;
@@ -16,7 +18,7 @@ export const projects: Project[] = [
     summary:
       "Cheaper models handled mechanical edits, stronger ones handled design and review.",
     detail:
-      "At Handled AI I built the system that split incoming engineering tickets into subtasks and routed each one to a coding agent based on what the work actually needed, rather than sending everything to the same model.",
+      "At Handled AI I designed the routing layer that decided which coding agent should handle each incoming engineering ticket, splitting the work into subtasks and sending each one to whatever the work actually needed instead of defaulting everything to the same model.",
     hardPart:
       "The failure mode was agents that wandered outside their lane. The loops that stayed reliable were the ones where I drew a hard boundary around what the agent was allowed to touch — file scope, tool access, and a clear handoff back to review. Loops I trusted to police themselves did not.",
   },
@@ -35,6 +37,7 @@ export const projects: Project[] = [
     slug: "vandycv",
     title: "VandyCV, an LLM-backed resume builder",
     href: "https://github.com/stanleychiu0314/vandycv",
+    demoUrl: "https://www.youtube.com/watch?v=Ob2rA8JFz4I&feature=youtu.be",
     tags: ["Next.js", "Flask", "PostgreSQL"],
     summary: "I owned the backend, the schema, and the prompting.",
     detail:
@@ -46,6 +49,7 @@ export const projects: Project[] = [
     slug: "klondike-solitaire",
     title: "Klondike Solitaire, a production full-stack game",
     href: "https://github.com/stanleychiu0314/KlondikeSolitair",
+    image: "/projects/klondike-gameplay.png",
     tags: ["React", "Node", "MongoDB"],
     summary: "Every move stored with before and after state, so undo and replay came for free.",
     detail:

@@ -51,6 +51,14 @@ export default function ProjectsPage() {
 
               <p className="text-muted-foreground">{project.detail ?? project.summary}</p>
 
+              {project.image && (
+                <img
+                  src={project.image}
+                  alt={`${project.title} screenshot`}
+                  className="w-full rounded-xl border border-border"
+                />
+              )}
+
               {project.hardPart && (
                 <div className="mt-1 rounded-xl border border-border bg-secondary/50 px-4 py-3">
                   <p className="mb-1 font-mono text-[11px] font-semibold uppercase tracking-[0.14em] text-primary">
@@ -60,16 +68,29 @@ export default function ProjectsPage() {
                 </div>
               )}
 
-              {project.href && (
-                <Link
-                  href={project.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="font-mono text-xs text-primary underline decoration-primary/40 underline-offset-4 hover:decoration-primary"
-                >
-                  view repository &rarr;
-                </Link>
-              )}
+              <div className="flex flex-wrap gap-4">
+                {project.href && (
+                  <Link
+                    href={project.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-mono text-xs text-primary underline decoration-primary/40 underline-offset-4 hover:decoration-primary"
+                  >
+                    view repository &rarr;
+                  </Link>
+                )}
+
+                {project.demoUrl && (
+                  <Link
+                    href={project.demoUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-mono text-xs text-primary underline decoration-primary/40 underline-offset-4 hover:decoration-primary"
+                  >
+                    watch demo &rarr;
+                  </Link>
+                )}
+              </div>
             </div>
           </Pane>
         ))}
