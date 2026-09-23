@@ -5,8 +5,8 @@ import { Badge } from "@/components/ui/badge";
 import { featuredProjects } from "@/lib/projects";
 
 const hobbies = [
-  "🏐 Volleyball. I was the starting setter on Vanderbilt Men's Club Volleyball, and we won the 2023 NCVF Division II national title",
-  "📷 Photography",
+  "Volleyball. I was the starting setter on Vanderbilt Men's Club Volleyball, and we won the 2023 NCVF Division II national title",
+  "Photography. Looking to travel to Banff and New Zealand next to take some amazing photos",
 ];
 
 const interests = [
@@ -83,12 +83,12 @@ export default function Home() {
           </ul>
         </Pane>
 
-        <Pane label="hobbies">
-          <h2 className="mb-4 font-mono text-xs font-semibold uppercase tracking-[0.18em] text-[#c9a15c]">
-            Off the clock
+        <Pane label="interests">
+          <h2 className="mb-4 font-mono text-xs font-semibold uppercase tracking-[0.18em] text-[#7a9c7f]">
+            Some things I&rsquo;m into
           </h2>
           <ul className="grid gap-3">
-            {hobbies.map((thing) => (
+            {interests.map((thing) => (
               <li key={thing} className="grid grid-cols-[16px_1fr] items-start gap-2.5">
                 <span className="leading-[1.65] text-muted-foreground">*</span>
                 <span className="text-foreground">{thing}</span>
@@ -97,12 +97,12 @@ export default function Home() {
           </ul>
         </Pane>
 
-        <Pane label="interests">
-          <h2 className="mb-4 font-mono text-xs font-semibold uppercase tracking-[0.18em] text-[#7a9c7f]">
-            Some things I&rsquo;m into
+        <Pane label="hobbies">
+          <h2 className="mb-4 font-mono text-xs font-semibold uppercase tracking-[0.18em] text-[#c9a15c]">
+            Off the clock
           </h2>
           <ul className="grid gap-3">
-            {interests.map((thing) => (
+            {hobbies.map((thing) => (
               <li key={thing} className="grid grid-cols-[16px_1fr] items-start gap-2.5">
                 <span className="leading-[1.65] text-muted-foreground">*</span>
                 <span className="text-foreground">{thing}</span>
