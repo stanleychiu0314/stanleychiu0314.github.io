@@ -3,19 +3,11 @@ import { Hero } from "@/components/hero";
 import { Pane } from "@/components/pane";
 import { Badge } from "@/components/ui/badge";
 import { featuredProjects } from "@/lib/projects";
+import { latestThoughts } from "@/lib/thoughts";
 
 const hobbies = [
   "Volleyball. I was the starting setter on Vanderbilt Men's Club Volleyball, and we won the 2023 NCVF Division II national title",
   "Photography. Looking to travel to Banff and New Zealand next to take some amazing photos",
-];
-
-const interests = [
-  "agent orchestration, and the question of which loops get to write",
-  "developer tools that respect the person using them",
-  "Learning, and always learning, whether that means explaining something to a room of students or being the most confused person in it",
-  "I think the bottleneck on an engineering team isn't how much code we can produce anymore — it's whether we're making the right calls, especially now that agents can happily chase edge cases nobody asked for",
-  "It's strange to me that something as powerful as AI is still mostly a solo, one-on-one chat window — I think it has a lot more to offer once it's built for a whole group instead of one person at a time",
-  "Engineering tools like GitHub still assume everyone touching them is an engineer, and I think that assumption is what's actually keeping non-engineers out of real engineering work",
 ];
 
 export default function Home() {
@@ -83,15 +75,28 @@ export default function Home() {
           </ul>
         </Pane>
 
-        <Pane label="interests">
-          <h2 className="mb-4 font-mono text-xs font-semibold uppercase tracking-[0.18em] text-[#7a9c7f]">
-            Some things I&rsquo;m into
-          </h2>
-          <ul className="grid gap-3">
-            {interests.map((thing) => (
-              <li key={thing} className="grid grid-cols-[16px_1fr] items-start gap-2.5">
-                <span className="leading-[1.65] text-muted-foreground">*</span>
-                <span className="text-foreground">{thing}</span>
+        <Pane label="thoughts">
+          <div className="mb-4 flex items-baseline justify-between gap-4">
+            <h2 className="font-mono text-xs font-semibold uppercase tracking-[0.18em] text-[#7a9c7f]">
+              Latest thoughts
+            </h2>
+            <Link
+              href="/thoughts"
+              className="font-mono text-xs text-primary underline decoration-primary/40 underline-offset-4 hover:decoration-primary"
+            >
+              all thoughts &rarr;
+            </Link>
+          </div>
+          <ul className="grid gap-4">
+            {latestThoughts.map((thought) => (
+              <li key={thought.slug} className="grid gap-1">
+                <Link
+                  href={`/thoughts/${thought.slug}`}
+                  className="font-medium text-foreground underline decoration-transparent underline-offset-4 hover:decoration-primary/50"
+                >
+                  {thought.title}
+                </Link>
+                <p className="text-sm text-muted-foreground">{thought.dek}</p>
               </li>
             ))}
           </ul>
