@@ -7,8 +7,8 @@ import { featuredProjects } from "@/lib/projects";
 const interests = [
   "agent orchestration, and the question of which loops get to write",
   "developer tools that respect the person using them",
-  "volleyball. I set, and we won an NCVF Division II national title in 2023",
-  "teaching, which is still the fastest way I know to find out what I do not understand",
+  "Volleyball. I was the starting setter on Vanderbilt Men's Club Volleyball, and we won the 2023 NCVF Division II national title",
+  "Learning, and always learning, whether that means explaining something to a room of students or being the most confused person in it",
 ];
 
 export default function Home() {
@@ -27,7 +27,7 @@ export default function Home() {
           <p className="mb-3 max-w-[62ch] text-muted-foreground">
             I studied Computer Science and Human &amp; Organizational Development at
             Vanderbilt, and I was the founding engineer at Handled AI in Brooklyn, where I
-            built an orchestrator that split engineering tickets into subtasks and routed
+            designed an orchestrator that split engineering tickets into subtasks and routed
             each one to a coding agent based on what the work needed.
           </p>
           <p className="mb-3 max-w-[62ch] text-muted-foreground">
