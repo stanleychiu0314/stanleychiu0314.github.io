@@ -51,10 +51,10 @@ export function Hero() {
         connect with me{" "}
         <span className="text-primary">&rarr;</span>{" "}
         <a
-          href="mailto:stanley.posiang.chiu@gmail.com"
+          href="mailto:posiang.chiu.stanley@gmail.com"
           className="text-foreground underline decoration-primary/40 underline-offset-4 hover:decoration-primary"
         >
-          stanley.posiang.chiu@gmail.com
+          posiang.chiu.stanley@gmail.com
         </a>
         <span className="px-1.5 text-border">|</span>
         <a

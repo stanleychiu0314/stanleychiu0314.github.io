@@ -10,8 +10,8 @@ export const metadata: Metadata = {
 const links = [
   {
     label: "email",
-    value: "stanley.posiang.chiu@gmail.com",
-    href: "mailto:stanley.posiang.chiu@gmail.com",
+    value: "posiang.chiu.stanley@gmail.com",
+    href: "mailto:posiang.chiu.stanley@gmail.com",
   },
   {
     label: "linkedin",

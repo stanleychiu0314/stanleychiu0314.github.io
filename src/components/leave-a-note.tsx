@@ -3,7 +3,7 @@
 import { useState, type FormEvent } from "react";
 import { Button } from "@/components/ui/button";
 
-const CONTACT_EMAIL = "stanley.posiang.chiu@gmail.com";
+const CONTACT_EMAIL = "posiang.chiu.stanley@gmail.com";
 
 export function LeaveANote() {
   const [name, setName] = useState("");

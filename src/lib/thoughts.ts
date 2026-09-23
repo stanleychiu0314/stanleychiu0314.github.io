@@ -8,6 +8,21 @@ export type Thought = {
 
 export const thoughts: Thought[] = [
   {
+    slug: "ai-in-groupchats",
+    title: "What if we had AI in groupchats?",
+    dek: "Not a smarter assistant for one person. Something that actually sits inside the group.",
+    date: "2026-09-24",
+    body: `Every AI chat I use assumes there is exactly one person on the other side of the conversation. That works fine until you notice how much of your actual thinking happens in a group instead of alone. Planning a trip with friends, deciding on a restaurant, arguing about which apartment to rent, coordinating a project with people who are not all looking at the same screen.
+
+What if the assistant lived in the groupchat itself instead of in five separate one on one conversations that never talk to each other. It would see the whole conversation, not a summary someone typed in later. It would know what was already decided, who pushed back and why, and what is still actually up for debate versus already settled.
+
+## A different kind of memory
+
+The hard part is not making it smarter. It is making it act like a member of the group instead of a tool one person occasionally consults. That means knowing when to speak up unprompted and when to stay quiet, and it means treating disagreement inside the group as real signal instead of noise to average away.
+
+I do not know exactly what this looks like yet. I know it is not a chatbot bolted onto the side of a group chat, answering questions when tagged. It is closer to a quiet participant that remembers everything the group already worked out, so nobody has to re-explain themselves every time they open the app.`,
+  },
+  {
     slug: "which-loops-get-to-write",
     title: "The question of which loops get to write",
     dek: "Read access is cheap. Write access is the whole design problem.",
@@ -30,17 +45,6 @@ The loops that stayed reliable were the ones with a hard line around file scope,
 The tools I trust the most are the ones that assume I am going to be wrong sometimes and design for that, instead of assuming I will always confirm carefully before pressing enter. Undo, dry runs, diffs before writes. None of that is exciting to build. All of it is the difference between a tool people rely on and a tool people are careful around.
 
 I think this matters more, not less, as more of the work gets delegated to agents instead of typed directly by a person. If the tool does not respect the person watching it work, an agent using that same tool will not either. The bar for what counts as a well designed tool should go up, not down, once something other than a human is the one clicking the buttons.`,
-  },
-  {
-    slug: "most-confused-person-in-the-room",
-    title: "Teaching, and being the most confused person in the room",
-    dek: "The best thing about teaching 150 students a semester was how often I was the one who did not understand yet.",
-    date: "2026-09-15",
-    body: `I taught Programming Languages to more than 150 students a semester for a while, and the thing nobody tells you about teaching is how much of it is admitting, in front of a room, that you do not currently understand the thing you are about to explain. Students ask the question that exposes the gap in your own model faster than almost anything else will.
-
-I try to keep that habit even outside a classroom. If I cannot explain something clearly to someone who has never seen it before, I usually do not understand it as well as I think I do. That test has caught more of my own bad assumptions than any code review has.
-
-The uncomfortable version of always learning is being willing to be the most confused person in a room on purpose, because that is usually where the actual learning happens. The comfortable version, staying in rooms where you already know more than everyone else, feels better and teaches you almost nothing.`,
   },
   {
     slug: "code-was-never-the-bottleneck",
