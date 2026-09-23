@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Pane } from "@/components/pane";
+import { LeaveANote } from "@/components/leave-a-note";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -54,6 +55,15 @@ export default function ContactPage() {
           ))}
         </ul>
       </Pane>
+
+      <div className="mt-6">
+        <Pane label="leave-a-note">
+          <h2 className="mb-3 font-mono text-xs font-semibold uppercase tracking-[0.18em] text-[#c9a15c]">
+            Or just drop a note
+          </h2>
+          <LeaveANote />
+        </Pane>
+      </div>
     </div>
   );
 }

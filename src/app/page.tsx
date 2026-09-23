@@ -4,11 +4,18 @@ import { Pane } from "@/components/pane";
 import { Badge } from "@/components/ui/badge";
 import { featuredProjects } from "@/lib/projects";
 
+const hobbies = [
+  "🏐 Volleyball. I was the starting setter on Vanderbilt Men's Club Volleyball, and we won the 2023 NCVF Division II national title",
+  "📷 Photography",
+];
+
 const interests = [
   "agent orchestration, and the question of which loops get to write",
   "developer tools that respect the person using them",
-  "Volleyball. I was the starting setter on Vanderbilt Men's Club Volleyball, and we won the 2023 NCVF Division II national title",
   "Learning, and always learning, whether that means explaining something to a room of students or being the most confused person in it",
+  "I think the bottleneck on an engineering team isn't how much code we can produce anymore — it's whether we're making the right calls, especially now that agents can happily chase edge cases nobody asked for",
+  "It's strange to me that something as powerful as AI is still mostly a solo, one-on-one chat window — I think it has a lot more to offer once it's built for a whole group instead of one person at a time",
+  "Engineering tools like GitHub still assume everyone touching them is an engineer, and I think that assumption is what's actually keeping non-engineers out of real engineering work",
 ];
 
 export default function Home() {
@@ -71,6 +78,20 @@ export default function Home() {
                   ))}
                 </div>
                 <p className="text-sm text-muted-foreground">{project.summary}</p>
+              </li>
+            ))}
+          </ul>
+        </Pane>
+
+        <Pane label="hobbies">
+          <h2 className="mb-4 font-mono text-xs font-semibold uppercase tracking-[0.18em] text-[#c9a15c]">
+            Off the clock
+          </h2>
+          <ul className="grid gap-3">
+            {hobbies.map((thing) => (
+              <li key={thing} className="grid grid-cols-[16px_1fr] items-start gap-2.5">
+                <span className="leading-[1.65] text-muted-foreground">*</span>
+                <span className="text-foreground">{thing}</span>
               </li>
             ))}
           </ul>
